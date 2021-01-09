@@ -23,8 +23,11 @@ def plus(file_1):
         
     
 def main():
-    file_1=input("Enter the name of the file: ")
-    plus(file_1)
+    try:
+        file_1=input("Enter the name of the file: ")
+        plus(file_1)
+    except FileNotFoundError:
+        print("File non trovato")
 
 if __name__ == '__main__':
     main()
