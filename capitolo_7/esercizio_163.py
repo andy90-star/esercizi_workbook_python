@@ -27,8 +27,8 @@ def names(file_1, file_2):
 
 def main():
     try:
-        file_1=("Enter the name of the file")
-        file_2=("Enter the name of the file")
+        file_1=input("Enter the name of the file")
+        file_2=input("Enter the name of the file")
         names(file_1, file_2)
     except FileNotFoundError:
         print("File not found!")
