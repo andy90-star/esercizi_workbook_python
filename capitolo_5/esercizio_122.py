@@ -21,8 +21,8 @@ def latin(word):
             if contator == 2:
                 word_1 = "".join(list_word)
                 break
+    return word_1
             
-    print(word_1)
            
                  
             
@@ -30,7 +30,8 @@ def latin(word):
 
 def main():
     word=input("Enter the word: ").lower()
-    latin(word)
+    word_work = latin(word)
+    print(type(word_work))
 
 if __name__ == "__main__":
     main()
