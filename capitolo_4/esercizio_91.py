@@ -43,11 +43,16 @@ def ordianl_date(day,month,year,moment):
 
                 
 def main():
-    moment = 0
-    day=input("Enter the number day: ")
-    month=int(input("Enter the month in number: "))
-    year=int(input("Enter the year: "))
-    ordianl_date(day,month,year,moment)
+    try:
+        moment = 0
+        day=input("Enter the number day: ")
+        month=int(input("Enter the month in number: "))
+        year=int(input("Enter the year: "))
+        ordianl_date(day,month,year,moment)
+    except ValueError:
+        print("It isn't int")
+    
+
 
 if __name__ == "__main__":
     main()

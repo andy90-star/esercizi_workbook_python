@@ -32,10 +32,13 @@ def ordinalDate(day,year):
     else:
         return day
 def main():
-    day=int(input("enter the day in number: "))
-    year=int(input("enter the year: "))
-    day_ordinal = ordinalDate(day,year)
-    print(day_ordinal)
+    try:
+        day=int(input("enter the day in number: "))
+        year=int(input("enter the year: "))
+        day_ordinal = ordinalDate(day,year)
+        print(day_ordinal)
+    except ValueError:
+            print("It isn't int")
 
 if __name__ == "__main__":
     main()
