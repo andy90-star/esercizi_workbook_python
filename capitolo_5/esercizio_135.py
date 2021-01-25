@@ -14,7 +14,6 @@ def Sieve(limit, list_number):
     for i in list_number:
         if list_number[i] != 0:
             print(i)
-
 def main():
     limit = int(input("Identify all primes up to what limit? "))
     list_number = []
