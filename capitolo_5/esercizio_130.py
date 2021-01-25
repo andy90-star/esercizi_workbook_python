@@ -1,11 +1,11 @@
 #!/bin/python3
 from esercizio_129 import token
-list_operator = ["-","+","*","/","("]
 f"""A +
 or - operator is unary if it is the first token in the list, or if the token that imme-
 diately precedes it is an operator or open parenthesis. Otherwise the operator is
 binary."""
-def unary_or_binary(expression, first):
+def unary_or_binary(first):
+    list_operator = ["-","+","*","/","("]
     if first[0] == "-" :
         first.pop(0)
         first.insert(0, "-u")
@@ -29,7 +29,7 @@ def unary_or_binary(expression, first):
 def main():
     expression = input("Enter the expression mathematical: ")
     first = token(expression)
-    first_1 = unary_or_binary(expression, first)
+    first_1 = unary_or_binary(first)
     print(first_1)
 if __name__ == "__main__":
     main()
