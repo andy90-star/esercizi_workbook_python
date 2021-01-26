@@ -1,7 +1,6 @@
 #!/bin/python3
 def polindromo(word):
     i = 0
-    sente = ""
     lista = list(word)
     lista3 = list()
     lista.reverse()
