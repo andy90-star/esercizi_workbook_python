@@ -8,8 +8,8 @@ def list_name(file_1, file_2):
     list_girl = list()
     file_1_1 =os.path.abspath(file_1)
     file_2_2 =os.path.abspath(file_2)
-    file_boy_open = open(file_1, "r")
-    file_girl_open = open(file_2, "r")
+    file_boy_open = open(file_1_1, "r")
+    file_girl_open = open(file_2_2, "r")
     for letter_2 in file_boy_open:
         for letter in letter_2:
             if letter != "," and letter != "\n" and letter != " ":
