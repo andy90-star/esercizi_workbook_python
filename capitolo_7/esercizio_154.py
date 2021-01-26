@@ -2,7 +2,6 @@
 import os
 def cripto(file_enter, confront):
     contator = 0
-    list_complete = list()
     file_find = os.path.abspath(file_enter)
     file_open = open(file_find,"r")
     list_file = list(file_open)
