@@ -1,10 +1,11 @@
 #!/bin/python3
 import os
-def spell(file_1):
+def ortography(file_1):
+    i = 0
+    cont = 0
+    list_word_know = ["ciao", "a","tutti","", "io","sono","il","vostro", "aiutante", "controllo", "la","vostra","grammatica", "felice", "di", "aiutarvi"]
     name = ""
-    #list_final = list()
     list_moment = list()
-    list_finally = list()
     file_path = os.path.abspath(file_1)
     file_open = open(file_path, "r")
     list_file = list(file_open)
@@ -12,18 +13,23 @@ def spell(file_1):
         for letter in letter_2:
             if letter != "," and letter != "\n" and letter != " ":
                 name+=letter
-            elif letter == ",":
+            elif letter == "," or letter == " ":
                 list_moment.append(name)
                 name=''
-    for letter in list_moment:
-        if not letter in list_finally:
-            cont = list_moment.count(letter)
-            print(letter, ": ", cont)
-            list_finally.append(letter)
-        
+    length = len(list_word_know)-1
+    for letter_2 in list_moment:
+        if i <length:
+            if letter_2 != list_word_know[i]:
+                cont+=1
+                i+=1
+            else:
+                i+=1
+
+    print(list_moment)
+    print(cont)
 def main():
     file_1 = input("Enter the name of the file: ")
-    spell(file_1)
+    ortography(file_1)
 
 if __name__ == '__main__':
     main()
