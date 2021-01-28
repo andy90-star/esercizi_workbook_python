@@ -13,8 +13,6 @@ def Flattening(list_neasted, list_moment,cont, length, cont_1, list_final):
                 if number != "[" and number != "]" and number != "," and number != " ":
                     list_final.append(number)
         return print(list_final)
-
-
 def main():
     list_final  = list()
     cont_1 = 0
@@ -23,8 +21,6 @@ def main():
     list_neasted = [1, [2, 3], [4, [5, [6, 7]]],[[[8], 9], [10]]]
     length = len(list_neasted)
     Flattening(list_neasted, list_moment,cont,length, cont_1, list_final)
-    
-
 if __name__ == '__main__':
     main()
 
